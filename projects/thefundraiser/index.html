@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../assets/baguetteBox/baguetteBox.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400;1,800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="../../assets/images/profilepicture%20-face.png">
+  <title>TheFundraiser</title>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="../../">Thibault Viaene</a>
+    <ul>
+      <li><a title="Home" href="../../">Home</a></li>
+      <li><a title="About" href="../../about">About</a></li>
+      <li><a title="Projects" href="../../projects" class="active">Projects</a></li>
+      <li><a title="Blog" href="../../blog">Blog</a></li>
+      <li><a title="Contact" href="../../contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <div class="projectheader">
+    <h1>Group Project</h1>
+  </div>
+  <section class="projectintro">
+    <div>
+      <h2>Read me:</h2>
+      <p>This is the result of our group project of the first year web development course. We had no strict assignment and
+        could choose to make any website. We got a list of competences where and needed to complete at least six of them.
+      This is The Funraiser, with our main goal to improve quality of student life at our Odisee Campus Ghent. I added these
+        features: a css burger menu, the javascript tilting cards on the team page, a home page with progress bar and the mission
+      page where the articles slide and fade in while scrolling. We had a blast making this! </p>
+      <a href="https://funraiser.thibeprovost.ikdoeict.be/" class="button">Visit project</a>
+    </div>
+    <img src="../../assets/images/groupproject1.png" alt="screenshot website group project">
+  </section>
+  <section class="projectphotos">
+    <h2>More pictures</h2>
+    <div class="gallery">
+      <a href="../../assets/images/groupproject2.png">
+        <img src="../../assets/images/groupproject2.png" alt="screenshot website group project">
+      </a>
+      <a href="../../assets/images/groupproject3.png">
+        <img src="../../assets/images/groupproject3.png" alt="screenshot website group project">
+      </a>
+      <a href="../../assets/images/groupproject4.png">
+        <img src="../../assets/images/groupproject4.png" alt="screenshot website group project">
+      </a>
+    </div>
+  </section>
+</main>
+<footer>
+  <p> &copy; 2022 Thibault Viaene </p>
+  <p>Ghent, Belgium</p>
+  <a title="GitHub" href="https://github.com/93TV">GitHub</a>
+</footer>
+<script src="../../assets/baguetteBox/baguetteBox.min.js" async></script>
+<script> baguetteBox.run('.gallery');</script>
+<script>
+  window.addEventListener('load', function() {
+    baguetteBox.run('.gallery');
+  });
+</script>
+</body>
+</html>
