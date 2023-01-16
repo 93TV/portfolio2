@@ -96,7 +96,7 @@ if (isset($_POST['btnSubmit'])) {
     <meta name="viewport"
           content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -126,13 +126,13 @@ if (isset($_POST['btnSubmit'])) {
                 <div class="namemail">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" value="<?php echo htmlentities($name); ?>"
-                           class="input-text"/>
+                           class="input-text">
                     <span class="message_error"><?php echo $msgName; ?></span>
                 </div>
                 <div class="namemail">
                     <label for="email">Email:</label>
                     <input type="text" id="email" name="email" value="<?php echo htmlentities($email); ?>"
-                           class="input-text"/>
+                           class="input-text">
                     <span class="message_error"><?php echo $msgEmail; ?></span>
                 </div>
             </div>
@@ -166,7 +166,7 @@ if (isset($_POST['btnSubmit'])) {
                 <span class="message_error"><?php echo $msgMessage; ?></span>
             </div>
 
-            <input class="button" type="submit" id="btnSubmit" name="btnSubmit" value="Send"/>
+            <input class="button" type="submit" id="btnSubmit" name="btnSubmit" value="Send">
 
         </form>
     </div>

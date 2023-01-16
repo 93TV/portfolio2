@@ -105,7 +105,7 @@ nav a::before {
     margin-bottom: 4rem;
 }
 
-.intro section {
+.intro div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,15 +113,15 @@ nav a::before {
     color: var(--main-color);
 }
 
-.intro section .button,
-.intro section .button:visited {
-    color:  var(--main-color);
+.intro div .button,
+.intro div .button:visited {
+    color: var(--main-color);
     border-color: var(--main-color);
 }
 
-.intro section .button:hover,
-.intro section .button:focus-visible {
-    background-color:  var(--main-color);
+.intro div .button:hover,
+.intro div .button:focus-visible {
+    background-color: var(--main-color);
     color: #000;
 }
 
@@ -179,19 +179,6 @@ h1:not(.intro h1) {
     width: 20rem;
 }
 
-.projects li > a.overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 10%;
-    border: none;
-    text-indent: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    opacity: 0;
-}
-
 .projects a:not(.overlay):hover,
 .projects a:not(.overlay):focus-visible {
     font-weight: 800;
@@ -200,7 +187,7 @@ h1:not(.intro h1) {
 
 .projects li:hover,
 .projects li:focus-visible {
-    scale: 103%;
+    transform: scale(1.03);
     transition: scale 0.3s ease-in-out;
 }
 
@@ -221,7 +208,6 @@ h1:not(.intro h1) {
 .outro::after {
     margin-top: 1rem;
 }
-
 
 
 .outro {
@@ -287,7 +273,7 @@ footer a::before {
     width: 100%;
     border-top: solid var(--accent-color1) 0.1rem;
     color: #000000;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .columns .col1 .profilepic {
@@ -311,7 +297,7 @@ footer a::before {
 }
 
 .columns .col1 .icon:hover {
-    scale:105%;
+    transform: scale(1.05);
 }
 
 .columns .col2 {
@@ -408,7 +394,7 @@ footer a::before {
 
 .projectphotos .gallery a:hover,
 .projectphotos .gallery a:focus-visible {
-    scale: 103%;
+    transform: scale(1.03);
     transition: scale 0.3s ease-in-out;
 }
 
@@ -470,9 +456,16 @@ form .input-text {
     color: #ff0000;
 }
 
-.blog {
+.arrow {
+    height: 5rem;
     padding: 1rem;
 }
+
+.arrow:hover,
+.arrow:focus-visible {
+    transform: scale(1.10);
+}
+
 
 .blogintro div h2 {
     color: var(--accent-color1);
@@ -491,7 +484,7 @@ form .input-text {
 
 .blogintro:hover,
 .blogIntro:focus-visible {
-    scale: 103%;
+    transform: scale(1.03);
     transition: scale 0.3s ease-in-out;
 }
 
@@ -541,7 +534,8 @@ form .input-text {
     margin-bottom: 3rem;
 }
 
-.blogintro .overlay {
+.blogintro .overlay,
+.projects li > a.overlay {
     position: absolute;
     top: 0;
     right: 0;
@@ -560,7 +554,7 @@ form .input-text {
     align-items: center;
 }
 
-.blog img {
+.blog img:not(.arrow) {
     height: 20rem;
 }
 
@@ -584,38 +578,6 @@ form .input-text {
     font-size: 1.2rem;
 }
 
-.arrow-left,
-.arrow-right {
-    position: relative;
-    left: 0;
-    width: 2rem;
-    height: 2rem;
-    background-color: var(--accent-color1);
-    transform: rotate(-45deg);
-}
-
-.arrow-left::after,
-.arrow-right::after {
-    content:'';
-    width: 2.5rem;
-    height: 2.5rem;
-    position: absolute;
-    background-color: var(--main-color);
-    top: 0.5rem;
-    left: 0.5rem;
-}
-
-.arrow-right {
-    transform: rotate(135deg);
-}
-
-.arrow-left:hover,
-.arrow-left:focus-visible,
-.arrow-right:hover,
-.arrow-right:focus-visible {
-    scale: 110%;
-}
-
 @media only screen and (max-width: 790px) {
     body {
         width: 100%;
@@ -633,6 +595,7 @@ form .input-text {
     .intro img {
         display: none;
     }
+
     .projects {
         justify-content: center;
         align-items: center;
@@ -667,7 +630,7 @@ form .input-text {
     }
 
     .blogpage {
-        padding-left:1rem;
+        padding-left: 1rem;
     }
 
     .blogintro {
@@ -682,7 +645,7 @@ form .input-text {
         justify-content: space-evenly;
     }
 
-    nav>a{
+    nav > a {
         display: none;
     }
 
@@ -694,9 +657,9 @@ form .input-text {
         display: none;
     }
 
-    .projectintro>div {
-        padding-left:1rem;
-        padding-right:1rem;
+    .projectintro > div {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .projectphotos {
@@ -708,7 +671,7 @@ form .input-text {
         height: auto;
     }
 
-    .arrow-right, .arrow-left{
+    .arrow {
         display: none;
     }
 }
@@ -753,8 +716,8 @@ form .input-text {
         margin-left: 1rem;
     }
 
-    .blog  {
-        gap:1rem;
+    .blog {
+        gap: 1rem;
     }
 
     .blogpicture {
@@ -762,7 +725,7 @@ form .input-text {
     }
 
     .blogpage {
-        padding-left:1rem;
+        padding-left: 1rem;
     }
 
     .blogintro {
@@ -777,9 +740,9 @@ form .input-text {
         display: none;
     }
 
-    .projectintro>div {
-        padding-left:1rem;
-        padding-right:1rem;
+    .projectintro > div {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .projectphotos {
@@ -795,7 +758,7 @@ form .input-text {
         justify-content: center;
     }
 
-    .arrow-right, .arrow-left{
+    .arrow {
         display: none;
     }
 }
