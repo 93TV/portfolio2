@@ -17,16 +17,15 @@ a, a:visited {
 }
 
 html {
-    max-width: 90rem;
-    font-family: Karla, sans-serif;
     background-color: var(--main-color);
-    margin: 0 auto;
-    padding: 0;
 }
 
 body {
-    width: 100%;
-    height: 100vh;
+    max-width: 90rem;
+    font-family: Karla, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    min-width: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -71,31 +70,23 @@ nav a::before {
     font-weight: 800;
 }
 
-.button {
-    font-weight: 800;
-    text-decoration: none;
-    padding: 1rem;
-    margin: 1rem;
-    color: var(--accent-color1);
-    border: solid 0.2rem var(--accent-color1);
-    border-radius: 1rem;
-}
-
+.button,
 .button:visited {
     font-weight: 800;
     text-decoration: none;
     padding: 1rem;
-    margin: 1rem;
-    color: var(--accent-color1);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--accent-color1);
+    color: var(--main-color);
     border: solid 0.2rem var(--accent-color1);
     border-radius: 1rem;
 }
 
 .button:hover,
 .button:focus-visible {
-    color: var(--main-color);
-    background-color: var(--accent-color1);
-    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    transform: scale(1.05);
+    transition: scale 0.5s ease-in-out;
 }
 
 .intro {
@@ -139,6 +130,7 @@ nav a::before {
 
 .projects h2:not(.h2smaller) {
     padding-left: 1rem;
+    color: var(--accent-color1);
 }
 
 .projects h1 {
@@ -316,7 +308,7 @@ footer a::before {
 }
 
 .columns .col2 p {
-    line-height: 1.5rem;
+    line-height: 1.6rem;
 }
 
 .skills {
@@ -338,10 +330,15 @@ footer a::before {
 
 .projectheader {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin-bottom: 3rem;
     margin-top: 3rem;
+    margin-left: 1rem;
+}
+
+.projectheader h1 {
+    font-size: 3rem;
 }
 
 .projectintro {
@@ -350,6 +347,11 @@ footer a::before {
     align-items: center;
     gap: 1rem;
     margin-bottom: 4rem;
+    margin-left: 1rem;
+}
+
+.projectintro h2 {
+    color: var(--accent-color1);
 }
 
 .projectintro img {
@@ -360,13 +362,13 @@ footer a::before {
 }
 
 .projectintro p {
-    line-height: 1.5rem;
+    line-height: 1.6rem;
 }
 
 .projectintro div {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .projectintro div h2 {
@@ -414,8 +416,8 @@ form h1 {
 form .namemail {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 1rem;
+    align-items: flex-start;
+    padding-bottom: 1rem;
 }
 
 form .namemail input {
@@ -472,14 +474,18 @@ form .input-text {
 }
 
 .blogintro {
-    max-width: 30rem;
+    max-width: 40rem;
     display: flex;
     margin-bottom: 1rem;
-    border-bottom: solid var(--accent-color1) 0.1rem;
+    border-bottom: solid rgba(14, 26, 79, 0.1) 0.1rem;
     padding-top: 0.5rem;
     padding-bottom: 1.5rem;
     gap: 1rem;
     position: relative;
+}
+
+.blogintro p {
+    line-height: 1.6rem;
 }
 
 .blogintro:hover,
@@ -550,6 +556,7 @@ form .input-text {
 
 .blog {
     display: flex;
+    height: 100vh;
     justify-content: space-between;
     align-items: center;
 }
@@ -567,7 +574,7 @@ form .input-text {
 
 .blogpage p {
     margin-bottom: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.6rem;
 }
 
 .blogpicture {
@@ -658,8 +665,7 @@ form .input-text {
     }
 
     .projectintro > div {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        margin-right: 1rem;
     }
 
     .projectphotos {
@@ -741,8 +747,7 @@ form .input-text {
     }
 
     .projectintro > div {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        margin-right: 1rem;
     }
 
     .projectphotos {
